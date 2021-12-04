@@ -14,7 +14,7 @@ wait = WebDriverWait(driver, 600)
 target = "'Meega'"
 
 # enter the message below
-string = "Suck my dick :>"
+text = "Suck my dick :>"
 
 x_arg = '//span[contains(@title,' + target + ')]'
 group_title = wait.until(EC.presence_of_element_located((
@@ -24,5 +24,5 @@ inp_xpath = '//div[@class="_13NKt copyable-text selectable-text"][@data-tab="9"]
 input_box = wait.until(EC.presence_of_element_located((
     By.XPATH, inp_xpath)))
 for i in range(1):
-    input_box.send_keys(string + Keys.ENTER)
+    input_box.send_keys(text + Keys.ENTER)
     time.sleep(1)
