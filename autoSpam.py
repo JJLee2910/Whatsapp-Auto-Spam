@@ -14,7 +14,7 @@ wait = WebDriverWait(driver, 600)
 target = "'Meega'"
 
 # enter the message below
-text = "Suck my dick :>"
+text = "Hello its a auto spam message :>"
 
 x_arg = '//span[contains(@title,' + target + ')]'
 group_title = wait.until(EC.presence_of_element_located((
@@ -23,6 +23,6 @@ group_title.click()
 inp_xpath = '//div[@class="_13NKt copyable-text selectable-text"][@data-tab="9"]'
 input_box = wait.until(EC.presence_of_element_located((
     By.XPATH, inp_xpath)))
-for i in range(1):
+for i in range(1):  # set the number of spamming. (1) only repeat for once
     input_box.send_keys(text + Keys.ENTER)
     time.sleep(1)
